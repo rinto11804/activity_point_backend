@@ -3,8 +3,9 @@ package helpers
 import (
 	"fmt"
 
-	"github.com/AlfrinP/point_calculator/repository"
-	"github.com/AlfrinP/point_calculator/storage"
+	"rinto11804/activity_point_backend/repository"
+	"rinto11804/activity_point_backend/storage"
+
 	"github.com/xuri/excelize/v2"
 )
 

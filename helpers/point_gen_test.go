@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/AlfrinP/point_calculator/models"
+	"rinto11804/activity_point_backend/models"
 )
 
 func TestGetPoint(t *testing.T) {

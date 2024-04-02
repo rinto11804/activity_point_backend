@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	con "github.com/AlfrinP/point_calculator/config"
+	con "rinto11804/activity_point_backend/config"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"

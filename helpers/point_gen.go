@@ -1,8 +1,8 @@
 package helpers
 
 import (
-	"github.com/AlfrinP/point_calculator/models"
-	"github.com/AlfrinP/point_calculator/util"
+	"rinto11804/activity_point_backend/models"
+	"rinto11804/activity_point_backend/util"
 )
 
 type Activity struct {

@@ -1,7 +1,8 @@
 package types
 
 import (
-	"github.com/AlfrinP/point_calculator/models"
+	"rinto11804/activity_point_backend/models"
+
 	"github.com/go-playground/validator"
 	"golang.org/x/crypto/bcrypt"
 )

@@ -4,7 +4,7 @@ import (
 	"log"
 	"testing"
 
-	"github.com/AlfrinP/point_calculator/storage"
+	"rinto11804/activity_point_backend/storage"
 )
 
 func TestFetchStudentTotalPoints(t *testing.T) {

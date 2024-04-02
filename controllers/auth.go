@@ -4,12 +4,13 @@ import (
 	"log"
 	"time"
 
-	"github.com/AlfrinP/point_calculator/config"
-	"github.com/AlfrinP/point_calculator/types"
+	"rinto11804/activity_point_backend/config"
+	"rinto11804/activity_point_backend/types"
 
-	"github.com/AlfrinP/point_calculator/repository"
-	"github.com/AlfrinP/point_calculator/storage"
-	"github.com/AlfrinP/point_calculator/util"
+	"rinto11804/activity_point_backend/repository"
+	"rinto11804/activity_point_backend/storage"
+	"rinto11804/activity_point_backend/util"
+
 	"github.com/gofiber/fiber/v2"
 )
 

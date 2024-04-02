@@ -5,7 +5,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AlfrinP/point_calculator/config"
+	"rinto11804/activity_point_backend/config"
+
 	"github.com/golang-jwt/jwt"
 	"golang.org/x/crypto/bcrypt"
 )

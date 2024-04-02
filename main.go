@@ -3,9 +3,10 @@ package main
 import (
 	"log"
 
-	"github.com/AlfrinP/point_calculator/config"
-	"github.com/AlfrinP/point_calculator/routes"
-	"github.com/AlfrinP/point_calculator/storage"
+	"rinto11804/activity_point_backend/config"
+	"rinto11804/activity_point_backend/routes"
+	"rinto11804/activity_point_backend/storage"
+
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"

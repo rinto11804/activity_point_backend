@@ -1,7 +1,8 @@
 package routes
 
 import (
-	"github.com/AlfrinP/point_calculator/controllers"
+	"rinto11804/activity_point_backend/controllers"
+
 	"github.com/gofiber/fiber/v2"
 )
 

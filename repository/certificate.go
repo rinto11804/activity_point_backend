@@ -3,7 +3,8 @@ package repository
 import (
 	"errors"
 
-	"github.com/AlfrinP/point_calculator/models"
+	"rinto11804/activity_point_backend/models"
+
 	"gorm.io/gorm"
 )
 

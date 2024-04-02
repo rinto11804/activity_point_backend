@@ -1,8 +1,9 @@
 package routes
 
 import (
-	"github.com/AlfrinP/point_calculator/controllers"
-	"github.com/AlfrinP/point_calculator/middleware"
+	"rinto11804/activity_point_backend/controllers"
+	"rinto11804/activity_point_backend/middleware"
+
 	"github.com/gofiber/fiber/v2"
 )
 
