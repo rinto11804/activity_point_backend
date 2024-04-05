@@ -24,7 +24,7 @@ func Uploader(file io.Reader, key string, fileType string) (string, error) {
 		contentType = aws.String("application/pdf")
 	}
 
-	con, _ := con.LoadConfig(".")
+	con, _ := con.LoadConfig()
 
 	sess, err := session.NewSession(&aws.Config{
 		Credentials: credentials.NewStaticCredentials(con.AWSAccessKeyID, con.AWSSecretAccessKey, ""),
@@ -62,7 +62,7 @@ func Downloader() {
 
 func DeleteFile(fileName string) error {
 
-	con, _ := con.LoadConfig(".")
+	con, _ := con.LoadConfig()
 
 	sess, err := session.NewSession(&aws.Config{
 		Credentials: credentials.NewStaticCredentials(con.AWSAccessKeyID, con.AWSSecretAccessKey, ""),

@@ -14,7 +14,7 @@ import (
 )
 
 func init() {
-	config, err := config.LoadConfig(".")
+	config, err := config.LoadConfig()
 	if err != nil {
 		log.Fatalln("Failed to load environment variables! \n", err.Error())
 	}

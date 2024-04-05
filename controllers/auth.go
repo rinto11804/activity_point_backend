@@ -153,7 +153,7 @@ func SignIn(c *fiber.Ctx) error {
 		})
 	}
 
-	config, _ := config.LoadConfig(".")
+	config, _ := config.LoadConfig()
 	tokenString, err := util.GenerateToken(id, role, config)
 	if err != nil {
 		return c.Status(fiber.StatusUnauthorized).JSON(fiber.Map{

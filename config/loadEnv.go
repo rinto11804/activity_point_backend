@@ -1,9 +1,8 @@
 package config
 
 import (
+	"os"
 	"time"
-
-	"github.com/spf13/viper"
 )
 
 type Config struct {
@@ -26,18 +25,27 @@ type Config struct {
 	ClientOrigin string `mapstructure:"CLIENT_ORIGIN"`
 }
 
-func LoadConfig(path string) (config Config, err error) {
-	viper.AddConfigPath(path)
-	viper.SetConfigType("env")
-	viper.SetConfigName(".env")
+// func LoadConfig() (config Config, err error) {
+// 	viper.SetConfigFile(".env")
+// 	viper.ReadInConfig()
+// 	viper.AutomaticEnv()
 
-	viper.AutomaticEnv()
+// 	err = viper.Unmarshal(&config)
+// 	return
+// }
 
-	err = viper.ReadInConfig()
-	if err != nil {
-		return
-	}
-
-	err = viper.Unmarshal(&config)
-	return
+func LoadConfig() (config Config, err error) {
+	return Config{
+		DBUserName:         os.Getenv("POSTGRES_USER"),
+		DBHost:             os.Getenv("POSTGRES_HOST"),
+		DBUserPassword:     os.Getenv("POSTGRES_PASSWORD"),
+		DBName:             os.Getenv("POSTGRES_DB"),
+		DBPort:             os.Getenv("POSTGRES_PORT"),
+		DBUrl:              os.Getenv("DATABASE_URL"),
+		JwtSecret:          os.Getenv("JWT_SECRET"),
+		Port:               os.Getenv("PORT"),
+		AWSRegion:          os.Getenv("AWS_REGION"),
+		AWSAccessKeyID:     os.Getenv("AWS_ACCESS_KEY_ID"),
+		AWSSecretAccessKey: os.Getenv("AWS_SECRET_ACCESS_KEY"),
+	}, nil
 }

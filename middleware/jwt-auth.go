@@ -17,7 +17,7 @@ import (
 func DeserializeUser(c *fiber.Ctx) error {
 	var tokenString string
 	authorization := c.Get("Authorization")
-	config, _ := config.LoadConfig(".")
+	config, _ := config.LoadConfig()
 
 	if strings.HasPrefix(authorization, "Bearer ") {
 		tokenString = strings.TrimPrefix(authorization, "Bearer ")
