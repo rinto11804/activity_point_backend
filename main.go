@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"fmt"
 
 	"rinto11804/activity_point_backend/config"
 	"rinto11804/activity_point_backend/routes"
@@ -21,7 +22,10 @@ func init() {
 	storage.ConnectDB(&config)
 }
 func main() {
-
+        config, err := config.LoadConfig()
+	if err != nil {
+		log.Fatalln("Failed to load environment variables! \n", err.Error())
+	}
 	app := fiber.New()
 	app.Use(cors.New())
 	app.Use(logger.New())
@@ -30,5 +34,5 @@ func main() {
 	routes.SetupPublicRoutes(app)
 	routes.SetupProtectedRoutes(app)
 
-	app.Listen(":3000")
+	app.Listen(fmt.Sprintf("0.0.0.0:%s", config.Port))
 }
